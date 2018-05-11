@@ -1,0 +1,16 @@
+#spring:
+#  cloud:
+#    gateway:
+#      locator:
+#        enabled: true
+#      default-filters:
+#      - AddResponseHeader=X-Response-Default-Foo, Default-Bar
+#      routes:
+#      # =====================================
+#      - id: service_to_test
+#        uri: lb://test-service-1
+#        order: 8000
+#        predicates:
+#        - Path=/test-service-1/**
+#        filters:
+#        - StripPrefix=1
