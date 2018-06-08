@@ -6,11 +6,11 @@ spring:
       connect-string: 10.132.0.6:32776
       config:
         root: /config/credit/test-sevice
-  zipkin:
-    baseUrl: http://127.0.0.1:9411/
+#  zipkin:
+#    baseUrl: http://127.0.0.1:9411/
 #    service:
 #      name: test-service-2
-  sleuth:
+#  sleuth:
 #    enabled: true
-    sampler:
-      probability: 1.0
+#    sampler:
+#      probability: 1.0
