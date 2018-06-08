@@ -14,6 +14,14 @@ import reactor.ipc.netty.http.server.HttpServerRequest;
 import javax.annotation.PostConstruct;
 import java.util.HashMap;
 import java.util.List;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.reactive.function.client.WebClient;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 @RestController
 public class TestController {
@@ -28,7 +36,14 @@ public class TestController {
 		return Flux.just("1", "2", "3");
 	}
 
-	@RequestMapping(value = "/test4")
+	@GetMapping(value = "/test31")
+	public Flux<String> test31() {
+		logger.info("-------------------->test31");
+		return webClient.mutate().baseUrl("http://127.0.0.1:8082/test3")
+				.build().get().retrieve().bodyToFlux(String.class);
+	}
+
+	@GetMapping(value = "/test4")
 	public Flux<String> test4() {
 		logger.info("-------------------->test4");
 //		return Flux.just("10", "20", "30");

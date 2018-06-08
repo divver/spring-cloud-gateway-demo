@@ -3,9 +3,10 @@ spring:
     name: test-service-2
   cloud:
     zookeeper:
-      connect-string: 10.132.0.6:32776
+      connect-string: 127.0.0.1:2181
       config:
         root: /config/credit/test-sevice
+
 #  zipkin:
 #    baseUrl: http://127.0.0.1:9411/
 #    service:

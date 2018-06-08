@@ -1,24 +1,39 @@
-# Compiled class file
-*.class
+# /
+*/build
+*/bin/*
+*/.classpath
+*/.settings
+*/.project
+*/.gradle
+*/**/.gradle
+*/**/.DS_Store
+*/**/.gitignore
+*/**/build
+*/**/out
+*/.idea
+*/.idea/*
 
-# Log file
+.idea
+.idea/*
+.classpath
+.gradle/
+.project
+.settings/
+.idea/
+bin/
+build/
+gradle/
+
+.idea
+.idea/*
+*.iml
+*.log.gz
+*.log.gz
+*/\$\{*
+.gradletasknamecache
+
+gradlew
+gradlew.bat
 *.log
+log/
 
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-/.idea/
-/spring-cloud-gateway-sample.iml
